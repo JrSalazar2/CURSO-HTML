@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera web</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        body {
+            font-family: "Lucida Console", "Courier New", monospace;
+            background: linear-gradient(to right, rgb(189, 189, 255), rgb(255, 233, 236));
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        h1 {
+            background-color: black;
+            padding: 10px;
+            margin: 0;
+            color: #92a4ff;
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        div.contenedor-formulario {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .footer {
+            background-color: #333;
+            color: #FFF;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PRIMERA WEB</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="preferencias.html">PREFERENCIAS</a></li>
+                <li><a class="active" href="audiovisuales.html">AUDIOVISUALES</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        
+        <div class="contenedor-formulario">
+            <form action="">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="NOMBRE COMPLETO" required minlength="3"> 
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" placeholder="APELLIDO COMPLETO" required minlength="3">
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" placeholder="CORREO ELECTRONICO" required>
+                <label for="ciudad">Ciduad:</label>
+                <select name="ciudad" id="ciudad" required>
+                    <option value="Caracas">Caracas</option>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Bolívar">Bolívar</option>
+                    <option value="Guatire">Guatire</option>
+                    <option value="Charallave">Charallave</option>
+                    <option value="Guarenas">Guarenas</option>
+                    <option value="Los Teques">Los Teques</option>
+                </select>
+                <label for="comentario">Comentarios:</label>
+                <textarea name="comentario" id="comentario" placeholder="ESCRIBE TUS COMENTARIOS"></textarea>
+                <label for="motivo">Motivo de Contacto</label>
+                <input type="radio" id="motivo" name="motivo"><i>Soy Patriota</i>               
+                <input type="radio" id="motivo" name="motivo"><i>Soy capitalista</i>               
+                <input type="radio" id="motivo" name="motivo"><i>Soy Comunista</i>               
+                <input type="radio" id="motivo" name="motivo"><i>Soy Oligarca</i>
+                <input type="submit" value="enviar">               
+            </form>
+        </div>
+        
+    <footer class="footer">
+        <p>Derechos reservados &copy 2023</p>
+    </footer>
+
+</body>
+</html>
